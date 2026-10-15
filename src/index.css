@@ -5,3 +5,22 @@
 @media(max-width:800px){.topbar{height:66px;padding:0 22px}.top-meta{display:none}.home-view{padding:0 22px}.hero{grid-template-columns:1fr;gap:20px;padding:48px 0 32px}.hero h1{font-size:clamp(56px,11vw,78px)}.hero-art{height:360px;max-width:570px;width:100%;margin:auto}.stats-strip{margin-bottom:62px}.stat-block{padding:16px;gap:10px}.stat-icon{width:34px;height:34px}.stat-block strong{font-size:18px}.game-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.challenge-banner{flex-wrap:wrap}.banner-btn{margin-left:60px}.history-row{grid-template-columns:30px 1fr 75px 80px}.history-accuracy{display:none}}
 @media(max-width:520px){.topbar{padding:0 15px}.brand{font-size:18px}.home-view{padding:0 15px}.hero{padding-top:37px}.hero h1{font-size:57px;letter-spacing:-3.8px}.hero-sub{font-size:13px}.hero-art{height:310px}.orbit-one{width:150px}.orbit-two{width:230px}.orbit-three{width:310px}.art-core{width:125px;height:125px}.art-core>div{width:82px;height:82px}.chip-a{left:10px;bottom:65px}.chip-b{right:10px;bottom:72px}.floating-chip{padding:8px}.stats-strip{grid-template-columns:1fr;margin-bottom:50px}.stat-block{min-height:70px;padding:12px 17px}.stat-block+.stat-block{border-left:0;border-top:1px solid #272c37}.section-heading h2{font-size:29px}.game-grid{grid-template-columns:1fr;gap:10px}.game-card{min-height:205px;padding:17px}.game-card p{min-height:0}.game-tag{margin-top:13px}.challenge-banner{padding:18px;gap:12px}.banner-symbol{width:40px;height:40px}.challenge-banner h3{font-size:15px}.challenge-banner p{line-height:1.5}.banner-btn{margin-left:0;width:100%;justify-content:center}.footer{font-size:7px;gap:8px}.footer span:nth-child(2){display:none}.play-view,.records-view{padding:18px 14px 35px}.play-nav{flex-wrap:wrap}.play-game-title{order:3;width:100%;padding:4px 0}.difficulty-control button{padding:7px 8px}.play-panel{padding:13px;min-height:560px}.play-panel-top{gap:10px}.play-tag,.round-counter{font-size:8px}.active-game{min-height:465px;padding:16px 0}.reaction-lights{gap:8px}.reaction-pad{min-height:115px}.reaction-pad span{font-size:18px}.answer-grid{grid-template-columns:repeat(2,1fr);gap:8px}.answer-btn{min-height:48px}.stroop-word{font-size:55px}.dot-arena{height:280px}.live-score{gap:15px}.live-score span{font-size:7px}.live-score b{font-size:13px}.mini-progress{display:none}.play-bottom{font-size:7px}.play-bottom button{font-size:7px}.result-stats{gap:6px}.result-stats strong{font-size:18px}.result-stats small{font-size:7px}.result-actions{width:100%}.result-actions button{flex:1;font-size:10px;padding:12px 8px}.records-heading h1{letter-spacing:-2px}.records-grid{grid-template-columns:1fr;gap:8px}.record-card{padding:14px 17px;display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:9px}.record-card strong{font-size:20px}.record-card>span{font-size:8px}.history-head{padding:16px}.history-row{grid-template-columns:23px 1fr 63px;gap:7px;padding:14px 12px}.history-time,.history-accuracy{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* Accesibilidad y controles táctiles */
+button{ -webkit-tap-highlight-color:transparent; touch-action:manipulation }
+button:focus-visible{outline:2px solid #d9ff67;outline-offset:3px;box-shadow:0 0 0 4px #d9ff6720}
+button:disabled{cursor:not-allowed}
+.reaction-pad:active,.answer-btn:active,.memory-color:active,.catch-dot:active{transform:scale(.96)}
+@media(hover:none){.game-card:hover,.primary-btn:hover,.secondary-btn:hover,.answer-btn:hover{transform:none}}
+@media(max-width:380px){
+  .hero h1{font-size:49px}
+  .hero-proof{flex-wrap:wrap;font-size:9px}
+  .art-coordinate{right:12px;top:12px;font-size:8px}
+  .art-label{left:12px;top:12px}
+  .floating-chip small{font-size:8px}
+  .play-panel-top{align-items:flex-start}
+  .round-counter{white-space:nowrap}
+  .catch-footer{gap:8px;font-size:7px}
+  .live-score{gap:10px}
+}
